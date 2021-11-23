@@ -443,13 +443,42 @@
                 <h2 class="accordion-header" id="headingTwentytwo">
                     <button class="accordion-button collapsed redColor fw-bold" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseTwentytwo" aria-expanded="false" aria-controls="collapseTwentytwo">
-                        22. What is ?
+                        22. What is 1NF, 2NF, 3NF, BCNF (NF=Normal Form)?
                     </button>
                 </h2>
                 <div id="collapseTwentytwo" class="accordion-collapse collapse" aria-labelledby="headingTwentytwo"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-
+                        <p>A relation is in <strong>first normal form</strong> if every attribute in that relation is
+                            singled valued attribute.</p>
+                        <p>To be in <strong>second normal form</strong>, a relation must be in first normal form and
+                            relation must not contain any partial dependency.</p>
+                        <p>A relation is in <strong>third normal form</strong>, if there is no transitive dependency for
+                            non-prime attributes as well as it is in second normal form.</p>
+                        <p>A relation R is in <strong>BCNF</strong> if R is in Third Normal Form and for every
+                            FD(Functional Dependencies), LHS is super key.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwentythree">
+                    <button class="accordion-button collapsed redColor fw-bold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwentythree" aria-expanded="false" aria-controls="collapseTwentythree">
+                        22. What is Normalization and Denormalization?
+                    </button>
+                </h2>
+                <div id="collapseTwentythree" class="accordion-collapse collapse" aria-labelledby="headingTwentythree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p><strong>Normalization</strong> is the method used in a database to reduce the data redundancy
+                            and data
+                            inconsistency from the table. It is the technique in which Non-redundancy and consistency
+                            data are stored in the set schema. By using normalization the number of tables is increased
+                            instead of decreased.</p>
+                        <p><strong>Denormalization</strong> is also the method which is used in a database. It is used to add the
+                            redundancy to execute the query quickly. It is a technique in which data are combined to
+                            execute the query quickly. By using denormalization the number of tables is decreased which
+                            oppose to the normalization.</p>
                     </div>
                 </div>
             </div>
