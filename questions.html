@@ -464,7 +464,7 @@
                 <h2 class="accordion-header" id="headingTwentythree">
                     <button class="accordion-button collapsed redColor fw-bold" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseTwentythree" aria-expanded="false" aria-controls="collapseTwentythree">
-                        22. What is Normalization and Denormalization?
+                        23. What is Normalization and Denormalization?
                     </button>
                 </h2>
                 <div id="collapseTwentythree" class="accordion-collapse collapse" aria-labelledby="headingTwentythree"
@@ -479,6 +479,289 @@
                             redundancy to execute the query quickly. It is a technique in which data are combined to
                             execute the query quickly. By using denormalization the number of tables is decreased which
                             oppose to the normalization.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwentyfour">
+                    <button class="accordion-button collapsed redColor fw-bold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwentyfour" aria-expanded="false" aria-controls="collapseTwentyfour">
+                        24. Code snippet of abstraction.
+                    </button>
+                </h2>
+                <div id="collapseTwentyfour" class="accordion-collapse collapse" aria-labelledby="headingTwentyfour"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+<pre>
+    abstract class shape{
+        abstract double area();
+        public abstract String toString();
+    }
+    class rectangle extends shape{
+        int length,breadth;
+        public rectangle(int l, int b){
+            this.length = l;
+            this.breadth = b;
+        }
+        double area(){
+            return length*breadth;
+        }
+        public String toString(){
+            return "Area if the rectangle is : " + area();
+        } 
+    }
+    class circle extends shape{
+        int radius;
+        public circle(int r){
+            this.radius = r;
+        }
+        double area(){
+            return 3.14*radius*radius;
+        }
+        public String toString(){
+            return "Area if the circle is : " + area();
+        } 
+    }
+    abstract class parent{
+        abstract void show();
+    }
+    class child extends parent{
+        void show(){
+            System.out.println("We are inside child class through abstraction class");
+        }
+    }
+    public class abstraction {
+        public static void main(String[] args) {
+            shape r = new rectangle(4,5);
+            shape c = new circle(7);
+            System.out.println(r.toString());
+            System.out.println(c.toString());
+            parent p = new child();
+            p.show();
+        }
+    }
+    
+</pre>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwentyfive">
+                    <button class="accordion-button collapsed redColor fw-bold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwentyfive" aria-expanded="false" aria-controls="collapseTwentyfive">
+                        25. Code snippet of encapsulation.
+                    </button>
+                </h2>
+                <div id="collapseTwentyfive" class="accordion-collapse collapse" aria-labelledby="headingTwentyfive"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+<pre>
+    class parent{
+        private String name;
+        public void set(String s){
+            name=s;
+        }
+        public String get(){
+            return name;
+        }
+    }
+    public class encapsulation{
+        public static void main(String[] args){
+            parent p = new parent();
+            p.set("chatur");
+            System.out.print("Name is: "+ p.get());
+        }
+    }
+</pre>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwentysix">
+                    <button class="accordion-button collapsed redColor fw-bold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwentysix" aria-expanded="false" aria-controls="collapseTwentysix">
+                        26. Code snippet of singleInheritance.
+                    </button>
+                </h2>
+                <div id="collapseTwentysix" class="accordion-collapse collapse" aria-labelledby="headingTwentysix"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+<pre>
+    class parent{
+        void show(){
+            System.out.println("Parent class");
+        }
+    }
+    class child extends parent{
+        void display(){
+            System.out.println("Inside child class");
+        }
+    }
+    public class singleInheritance {
+        public static void main(String[] args) {
+            child c = new child();
+            c.show();
+            c.display();
+        }
+    }
+    
+</pre>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwentyseven">
+                    <button class="accordion-button collapsed redColor fw-bold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwentyseven" aria-expanded="false" aria-controls="collapseTwentyseven">
+                        27. Code snippet of multipleInheritance.
+                    </button>
+                </h2>
+                <div id="collapseTwentyseven" class="accordion-collapse collapse" aria-labelledby="headingTwentyseven"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+<pre>
+    interface one{
+        public void run();
+    }
+    interface two{
+        public void display();
+    }
+    interface three extends one,two{
+        public void show();
+    }
+    class child implements three{
+        public void run(){ System.out.println("Interface One"); }
+        public void display(){ System.out.println("Interface two"); }
+        public void show(){ System.out.println("Interface three"); }
+    }
+    public class multipleInheritance {
+        public static void main(String[] args) {
+            child c = new child();
+            c.run();
+            c.display();
+            c.show();
+        }
+    }    
+</pre>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwentyeight">
+                    <button class="accordion-button collapsed redColor fw-bold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwentyeight" aria-expanded="false" aria-controls="collapseTwentyeight">
+                        28. Code snippet of Multi Level Inheritance.
+                    </button>
+                </h2>
+                <div id="collapseTwentyeight" class="accordion-collapse collapse" aria-labelledby="headingTwentyeight"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+<pre>
+    class A{
+        void run(){
+            System.out.println("Inside Class A");
+        }
+    }
+    class B extends A{
+        void display(){
+            System.out.println("Inside Class B");
+        }
+    }
+    class C extends B{
+        void show(){
+            System.out.println("Inside Class C");
+        }
+    }
+    public class multilevelInheritance {
+        public static void main(String[] args) {
+            C c = new C();
+            c.run();
+            c.display();
+            c.show();
+        }
+    }    
+</pre>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwentynine">
+                    <button class="accordion-button collapsed redColor fw-bold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwentynine" aria-expanded="false" aria-controls="collapseTwentynine">
+                        29. Code snippet of Method Overloading.
+                    </button>
+                </h2>
+                <div id="collapseTwentynine" class="accordion-collapse collapse" aria-labelledby="headingTwentynine"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+<pre>
+    class parent{
+        public void add(int a, int b){
+            System.out.println("Sum of two integer number is: " + (a+b));
+        }
+        public void add(double a, double b){
+            System.out.printf("Sum of two floating numbner is: %.2f \n", (a+b));
+        }
+        public void add(int a, int b, int c){
+            System.out.println("Sum of three integer number is: " + (a+b+c));
+        }
+        public void show(String s){
+            System.out.println("String is: " + s);
+        }
+        public void show(char ch){
+            System.out.println("Character is: " + ch);
+        }
+        public void show(byte b){
+            System.out.println("Character is: " + b);
+        }
+    }
+    public class overloading {
+        public static void main(String[] args) {
+            parent p = new parent();
+            p.add(1,2);
+            p.add(1.2,2.2);
+            p.add(1,2,3);
+            p.show("Chatur");
+            p.show('C');
+            byte a=25;
+            p.show(a);
+        }
+    }
+    
+</pre>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThirty">
+                    <button class="accordion-button collapsed redColor fw-bold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThirty" aria-expanded="false" aria-controls="collapseThirty">
+                        30. Code snippet of Method Overriding.
+                    </button>
+                </h2>
+                <div id="collapseThirty" class="accordion-collapse collapse" aria-labelledby="headingThirty"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+<pre>
+    class parent{
+        public void show(){
+            System.out.println("This is the parent class");
+        }
+    }
+    class child extends parent{
+        public void show(){
+            System.out.println("This is the child class");
+        }
+    }
+    public class overriding {
+        public static void main(String[] args) {
+            parent p = new parent();
+            parent c = new child();
+            p.show();
+            c.show();
+        }
+    }
+</pre>
                     </div>
                 </div>
             </div>
