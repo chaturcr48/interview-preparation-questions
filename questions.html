@@ -28,15 +28,15 @@
 
         <ul class="nav justify-content-center">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/questions.html">DSA</a>
+                <a class="nav-link active" aria-current="page" href="/questions.html">DSA</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/oop.html">OOP</a>
+                <a class="nav-link" href="/oop.html">OOP</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/dbms.html">DBMS</a>
+                <a class="nav-link" href="/dbms.html">DBMS</a>
             </li>
-          </ul>
+        </ul>
 
         <div class="accordion" id="accordionExample">
 
@@ -44,14 +44,36 @@
                 <h2 class="accordion-header" id="headingOne">
                     <button class="accordion-button redColor fw-bold" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        1. What is an array?
+                        1. What is a wrapper class?
                     </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        An array is a collection of similar data elements stored at contiguous memory locations.
-                        It is a user defined data type.
+                        <p>
+                            A Wrapper class is a class whose object wraps or contains primitive data types. When we
+                            create
+                            an object to a wrapper class, it contains a field and in this field, we can store primitive
+                            data
+                            types. In other words, we can wrap a primitive value into a wrapper class object.
+                        </p>
+                        <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200806191733/Wrapper-Class-in-Java.png"
+                            alt="" width="400px">
+                        <pre>
+    public class Main {
+        public static void main(String[] args)
+        {
+            char c='a';  // premitive data type
+            // primitive to Character object conversion
+            Character ch=c; // wrapper class
+            System.out.println(c+" "+ch);
+        }
+    }
+</pre>
+                        <p><strong>Here <span class="text-primary">Character</span>
+                                is the wrapper class of <span class="text-primary">char c</span>
+                                and <span class="text-primary">ch</span> is the object of class <span
+                                    class="text-primary">Character</span>.</strong></p>
                     </div>
                 </div>
             </div>
@@ -59,13 +81,62 @@
                 <h2 class="accordion-header" id="headingTwo">
                     <button class="accordion-button collapsed redColor fw-bold" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        2. What is string?
+                        2. What is Autoboxing and Unboxing in java?
                     </button>
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        A string is a sequence of characters, either as a literal constant or as some kind of variables.
+                        <p><strong>Autoboxing:</strong> Automatic conversion of primitive types to the object of their
+                            corresponding
+                            wrapper classes is known as autoboxing. For example – conversion of int to Integer, long to
+                            Long, double to Double etc.</p>
+<pre>
+import java.util.ArrayList;
+class Main
+{
+    public static void main(String[] args)
+    {
+        char ch = 'a';
+
+        // Autoboxing- primitive to Character object conversion
+        Character a = ch;
+
+        ArrayList<Integer> arrayList = new ArrayList<Integer>();
+
+        // Autoboxing because ArrayList stores only objects
+        arrayList.add(25);
+
+        // printing the values from object
+        System.out.println(arrayList.get(0));
+    }
+}
+</pre>
+                        <p><strong>Unboxing:</strong> It is just the reverse process of autoboxing. Automatically
+                            converting an object of a wrapper class to its corresponding primitive type is known as
+                            unboxing. For example – conversion of Integer to int, Long to long, Double to double, etc.
+                        </p>
+<pre>
+import java.util.ArrayList;
+class Main
+{
+    public static void main(String[] args)
+    {
+        Character ch = 'a';
+        // unboxing - Character object to primitive conversion
+        char a = ch;
+
+        ArrayList<Integer> arrayList = new ArrayList<Integer>();
+        arrayList.add(24);
+
+        // unboxing because get method returns an Integer object
+        int num = arrayList.get(0);
+
+        // printing the values from primitive data types
+        System.out.println(num);
+    }
+}
+</pre>
                     </div>
                 </div>
             </div>
@@ -488,7 +559,8 @@
                             inconsistency from the table. It is the technique in which Non-redundancy and consistency
                             data are stored in the set schema. By using normalization the number of tables is increased
                             instead of decreased.</p>
-                        <p><strong>Denormalization</strong> is also the method which is used in a database. It is used to add the
+                        <p><strong>Denormalization</strong> is also the method which is used in a database. It is used
+                            to add the
                             redundancy to execute the query quickly. It is a technique in which data are combined to
                             execute the query quickly. By using denormalization the number of tables is decreased which
                             oppose to the normalization.</p>
@@ -505,7 +577,7 @@
                 <div id="collapseTwentyfour" class="accordion-collapse collapse" aria-labelledby="headingTwentyfour"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-<pre>
+                        <pre>
     abstract class shape{
         abstract double area();
         public abstract String toString();
@@ -568,7 +640,7 @@
                 <div id="collapseTwentyfive" class="accordion-collapse collapse" aria-labelledby="headingTwentyfive"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-<pre>
+                        <pre>
     class parent{
         private String name;
         public void set(String s){
@@ -599,7 +671,7 @@
                 <div id="collapseTwentysix" class="accordion-collapse collapse" aria-labelledby="headingTwentysix"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-<pre>
+                        <pre>
     class parent{
         void show(){
             System.out.println("Parent class");
@@ -632,7 +704,7 @@
                 <div id="collapseTwentyseven" class="accordion-collapse collapse" aria-labelledby="headingTwentyseven"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-<pre>
+                        <pre>
     interface one{
         public void run();
     }
@@ -669,7 +741,7 @@
                 <div id="collapseTwentyeight" class="accordion-collapse collapse" aria-labelledby="headingTwentyeight"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-<pre>
+                        <pre>
     class A{
         void run(){
             System.out.println("Inside Class A");
@@ -707,7 +779,7 @@
                 <div id="collapseTwentynine" class="accordion-collapse collapse" aria-labelledby="headingTwentynine"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-<pre>
+                        <pre>
     class parent{
         public void add(int a, int b){
             System.out.println("Sum of two integer number is: " + (a+b));
@@ -755,7 +827,7 @@
                 <div id="collapseThirty" class="accordion-collapse collapse" aria-labelledby="headingThirty"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-<pre>
+                        <pre>
     class parent{
         public void show(){
             System.out.println("This is the parent class");
