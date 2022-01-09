@@ -505,56 +505,7 @@
                 <div id="collapseTwentyfour" class="accordion-collapse collapse" aria-labelledby="headingTwentyfour"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-<pre>
-    abstract class shape{
-        abstract double area();
-        public abstract String toString();
-    }
-    class rectangle extends shape{
-        int length,breadth;
-        public rectangle(int l, int b){
-            this.length = l;
-            this.breadth = b;
-        }
-        double area(){
-            return length*breadth;
-        }
-        public String toString(){
-            return "Area if the rectangle is : " + area();
-        } 
-    }
-    class circle extends shape{
-        int radius;
-        public circle(int r){
-            this.radius = r;
-        }
-        double area(){
-            return 3.14*radius*radius;
-        }
-        public String toString(){
-            return "Area if the circle is : " + area();
-        } 
-    }
-    abstract class parent{
-        abstract void show();
-    }
-    class child extends parent{
-        void show(){
-            System.out.println("We are inside child class through abstraction class");
-        }
-    }
-    public class abstraction {
-        public static void main(String[] args) {
-            shape r = new rectangle(4,5);
-            shape c = new circle(7);
-            System.out.println(r.toString());
-            System.out.println(c.toString());
-            parent p = new child();
-            p.show();
-        }
-    }
-    
-</pre>
+                        <script src="//onlinegdb.com/embed/js/fnBVR_BJi?theme=dark"></script>
                     </div>
                 </div>
             </div>
